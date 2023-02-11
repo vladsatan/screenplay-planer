@@ -26,3 +26,7 @@ code {
   padding: 0 16px;
   position: relative;
 }
+
+a {
+  text-decoration: none;
+}

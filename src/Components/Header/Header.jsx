@@ -2,6 +2,7 @@ import React from "react";
 import "./Header.css";
 import userLogo from "../../img/user.png";
 import youtubeLogo from "../../img/youtube.png";
+import { Link } from "react-router-dom";
 
 export default function Header(props) {
   const { status, changeStatus } = props;
@@ -15,15 +16,25 @@ export default function Header(props) {
         </div>
 
         <nav>
+
+        <Link to="/createproject">
           <div className="nav-btn">
             <p>Create project</p>
           </div>
+        </Link>
+
+        <Link to="/">
           <div className="nav-btn">
             <p>My projects</p>
           </div>
-          <div className="nav-btn">
+        </Link>
+
+        <Link to="/settings">
+        <div className="nav-btn">
             <p>Settings</p>
-          </div>
+        </div>
+        </Link>
+
         </nav>
 
         {status? 
